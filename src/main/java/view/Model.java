@@ -1,6 +1,6 @@
 package view;
 
-public class Cliente {
+public class Model {
 
 //Informações para criação do Banco com dados de Cidade e Estado
     public Long idEstado;
@@ -10,10 +10,10 @@ public class Cliente {
     public String txtNomeCidade;
     public Long txtCEP;
 
-    public Cliente() {
+    public Model() {
     }
 
-    public Cliente(Long idEstado, String txtNomeEstado, String txtUF, Long id, String txtNomeCidade, Long txtCEP) {
+    public Model(Long idEstado, String txtNomeEstado, String txtUF, Long id, String txtNomeCidade, Long txtCEP) {
         super();
         this.idEstado = idEstado;
         this.txtNomeEstado = txtNomeEstado;
@@ -23,14 +23,14 @@ public class Cliente {
         this.txtCEP = txtCEP;
     }
 
-    public Cliente(String txtNomeEstado, String txtUF, String txtNomeCidade, Long txtCEP) {
+    public Model(String txtNomeEstado, String txtUF, String txtNomeCidade, Long txtCEP) {
         this.txtNomeEstado = txtNomeEstado;
         this.txtUF = txtUF;
         this.txtNomeCidade = txtNomeCidade;
         this.txtCEP = txtCEP;
     }
 
-    Cliente(String estado, String uf) {
+    Model(String estado, String uf) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

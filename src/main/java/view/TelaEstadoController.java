@@ -1,7 +1,7 @@
 package view;
 
 import dao.Conexao;
-import dao.Usuario;
+import dao.InserirEstadoBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -18,11 +18,11 @@ public class TelaEstadoController {
         String estado = view.getTxtNomeEstado().getText();
         String uf = view.getTxtUF().getText();
 
-        Cliente user = new Cliente(estado, uf);
+        Model user = new Model(estado, uf);
 
         try {
             Connection conexao = new Conexao().getConnection();
-            Usuario users = new Usuario(conexao);
+            InserirEstadoBD users = new InserirEstadoBD(conexao);
             users.insert(user);
 
             JOptionPane.showMessageDialog(null, "Registro realizado com sucesso!");

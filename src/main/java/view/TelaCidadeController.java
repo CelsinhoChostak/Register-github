@@ -1,7 +1,7 @@
 package view;
 
 import dao.Conexao;
-import dao.Usuario2;
+import dao.InserirCidadeBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -18,11 +18,11 @@ public class TelaCidadeController {
         String estado = view.getTxtNomeCidade().getText();
         String uf = view.getTxtCEP().getText();
 
-        Cliente user = new Cliente(estado, uf);
+        Model user = new Model(estado, uf);
 
         try {
             Connection conexao = new Conexao().getConnection();
-            Usuario2 users = new Usuario2(conexao);
+            InserirCidadeBD users = new InserirCidadeBD(conexao);
             users.insert(user);
 
             JOptionPane.showMessageDialog(null, "Registro realizado com sucesso!");
