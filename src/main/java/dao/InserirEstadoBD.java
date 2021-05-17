@@ -15,7 +15,7 @@ public class InserirEstadoBD {
 
 //Dados TelaEstado
     public void insert(Model usuario) throws SQLException {
-        String sql = "insert into estado(nomeEstado, uf) values ('" + usuario.getTxtNomeEstado() + "', '" + usuario.getTxtUF() + "');";
+        String sql = "insert into estado(estado, uf) values ('" + usuario.getTxtNomeEstado() + "', '" + usuario.getTxtUF() + "');";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.execute();
         connection.close();

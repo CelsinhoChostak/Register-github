@@ -15,7 +15,7 @@ public class InserirCidadeBD {
 
 //Dados TelaCidade
     public void insert(Model usuario2) throws SQLException {
-        String sql = "insert into cidade(nomeCidade, cep) values ('" + usuario2.getTxtNomeCidade() + "', '" + usuario2.getTxtCEP() + "');";
+        String sql = "insert into cidade(cidade, cep) values ('" + usuario2.getTxtNomeCidade() + "', '" + usuario2.getTxtCEP() + "');";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.execute();
         connection.close();
